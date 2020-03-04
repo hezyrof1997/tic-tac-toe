@@ -1,0 +1,118 @@
+body {
+    max-width: 768px;
+    margin: auto;
+    background: lightblue;
+}
+
+/* wyglad tabeli w planszy */
+
+td, table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+}
+
+td.unclicked {
+    text-align: left;
+    font-size: 20px;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.disabledPionterEvents {
+    pointer-events: none;
+}
+
+td:hover {
+    background: rgb(197, 71, 71);
+}
+
+/* Wygląd containera po wyswietleniu wyboru znaku i rozpoczynajacego */
+
+.containerWybor {
+    padding: 20px;
+    font-size: 2em;
+}
+
+@media (max-width:500px){
+
+
+    .containerWybor {
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+}
+
+.naglowek, .naglowek2, .stopka, .restart, .menu {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    background: orange;
+    cursor: default;
+}
+
+.restart:hover, .menu:hover {
+    background: rgb(211, 144, 19);
+    cursor: pointer;
+}
+
+.stopka {
+    display: none;
+    background: gray;
+    color: red;
+    font-weight: bold;
+}
+
+.naglowekHidden {
+    display: none;
+}
+
+.znaki {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(204, 203, 203);
+}
+
+.znaki>div {
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+
+.znaki>div:hover {
+    background: #919090;
+    cursor: pointer;
+}
+
+/* Wygląd containera po wyswietleniu planszy */
+
+.containerPlansza {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.containerPlansza>div {
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: tomato;
+    cursor: pointer;
+}
+
+/* wygląd komórek po wygranej */
+
+.wygrana {
+    background: rgb(54, 216, 54);
+}
